@@ -3,13 +3,16 @@ import PropTypes from 'prop-types';
 import ShelfChanger from './ShelfChanger';
 import './App.css'
 
-const Book = props => {
-  const { book, books, changeShelf } = props;
-  const title = book.title
+const BookShelf = props => {
+  const { books, changeShelf } = props;
+ 
    
         
     return (   
-       <li>
+     <div className="bookshelf-books">
+      <ol className="books-grid">
+       {this.props.books.map(book =>
+        <li key={book.id} className="book">
          <div className="book">
            <div className="book-top">
              <div 
@@ -23,7 +26,7 @@ const Book = props => {
              <ShelfChanger book={book} books={books} changeShelf={changeShelf} />
             </div>
             <div className="book-title">
-             {title}
+             {book.title}
             </div>
             <div className="book-authors">{book.authors && 
               <div className="book=authors">
@@ -33,14 +36,18 @@ const Book = props => {
             </div> 
          </div>
         </li>
+            )}
+          </ol>
+        </div>
+
        )}  
 
 
 
-Book.propTypes = {
+BookShelf.propTypes = {
   book: PropTypes.object.isRequired,
   books: PropTypes.array.isRequired,
   changeShelf: PropTypes.func.isRequired
 };
 
-export default Book;
+export default BookShelf;
