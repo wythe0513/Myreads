@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import ShelfChanger from "./ShelfChanger"
 
-/* This component builds the book */
 
 const Book = props => {
   const { book, books, changeShelf } = props;
@@ -26,7 +26,7 @@ const Book = props => {
             className="book-cover"
             style={{ backgroundImage:`url(${bookCover})`}}
           />
-          <ShelfChanger book = {book} books = {books} changeShelf = {changeShelf} />
+          <ShelfChanger book={book} books={books} changeShelf={changeShelf} />
          </div>
          <div className="book-title">{bookTitle}</div>
          <div className="book-authors">{bookAuthors}</div>
@@ -36,7 +36,7 @@ const Book = props => {
 };
 
 Book.propTypes = {
-  books: PropTypes.object.isRequired,
+  book: PropTypes.object.isRequired,
   books: PropTypes.array.isRequired,
 };
 
