@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import Book from './Book';
+import BookShelf from './BookShelf';
 import * as BooksAPI from './BooksAPI';
 
 class Search extends Component {
@@ -39,7 +39,7 @@ class Search extends Component {
     return (
       <div className="search-books">
         <div className="search-books-bar">
-          <Link className="close-search" to="/">
+          <Link className="close-search" to="/search">
             Close
           </Link>
           <div className="search-books-input-wrapper">
@@ -57,7 +57,7 @@ class Search extends Component {
               <h3>Search returned {newBooks.length} books </h3>
               <ol className="books-grid">
                 {newBooks.map(book => (
-                  <Book
+                  <BookShelf
                     book={book}
                     books={books}
                     key={book.id}
