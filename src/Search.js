@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import BookShelf from './BookShelf';
 import * as BooksAPI from './BooksAPI';
+import ShelfChanger from './ShelfChanger.js'
 
 class Search extends Component {
   static propTypes = {
@@ -56,14 +56,30 @@ class Search extends Component {
             <div>
               <h3>Search returned {newBooks.length} books </h3>
               <ol className="books-grid">
-                {newBooks.map(book => (
-                  <BookShelf
-                    book={book}
-                    books={books}
-                    key={book.id}
-                    changeShelf={changeShelf}
-                  />
-                ))}
+                {newBooks.map(newbook=>
+              <li key={newbook.id} className="book">
+
+         
+           
+           <div className="book-top">
+             <div className="book-cover" 
+	          style={{ 
+                width: 128, 
+                height: 193, 
+                backgroundImage: `url(${newbook.imageLinks.thumbnail})` 
+              }}>
+              </div>
+              <ShelfChanger book={newbook} books={books} changeShelf={changeShelf}/>
+             
+           </div>
+
+          <div className="book-title">{newbook.title}</div>
+          <div className="book-authors">{newbook.authors}</div>
+        
+        
+         
+       </li>
+      )}
               </ol>
             </div>
           )}
