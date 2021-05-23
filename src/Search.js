@@ -78,7 +78,7 @@ class Search extends Component {
                   </div>
 
                   <div className="book-title">{newbook.title}</div>
-                  <div className="book-authors">{newbook.authors}</div>       
+                  <div className="book-authors">{newbook.authors.join(" & ")}</div>       
                 </li>
                 )}
              </ol>
