@@ -1,22 +1,22 @@
 # MyReads Project
 
-This is a Udacity React nanodegree Program.As an introcution for React learner, this covers basics of React.
+This is a Udacity React Nanodegree Program. As an introcution for React learner, this covers basics of React.
 
-# How to use
+# How to use this App
 
 To get started, install necessary dependencies:
 
-`$ npm install`
-`$ npm install --g create-react-app`
-`$ npm install --save props-types`
-`$ npm install --save escape-string-regex sort-by`
-`$ npm install --save form-serialize`
-`$ npm install --react-router-dom`
-`$ npm install -i --save lodash`
+`$ npm install`<br>
+`$ npm install --g create-react-app`<br>
+`$ npm install --save props-types`<br>
+`$ npm install --save escape-string-regex sort-by`<br>
+`$ npm install --save form-serialize`<br>
+`$ npm install --react-router-dom`<br>
+`$ npm install -i --save lodash`<br>
 
 Then,
 
-`$ npm start`
+`$ npm start`<br>
 
 # Structure
 
@@ -30,10 +30,10 @@ Then,
 └── src
     ├── App.css 
     ├── App.js
-    |------ BookList.js
-    |------ BookShelf.js
-    |------ Serch.js
-    |------ SerchChanger.js
+    |-- BookList.js
+    |-- BookShelf.js
+    |-- Serch.js
+    |-- SerchChanger.js
     ├── App.test.js 
     ├── BooksAPI.js 
     ├── icons 
